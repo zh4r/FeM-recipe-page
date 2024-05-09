@@ -1,5 +1,5 @@
 html {
-    font-family: outfit, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Outfit, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
     padding: 0;
     margin: 0;
@@ -51,6 +51,27 @@ ol {
     color: hsl(30, 10%, 34%);
 }
 
+li {
+    list-style: none;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+li::before {
+    content: "•";
+    font-size: 1.4rem;
+    color: hsl(332, 51%, 32%);
+    display: inline-flex;
+    
+    width: 2.4rem;
+    margin-left: -1.8rem;
+}
+
+ol li {
+    list-style: none;
+}
+
 p {
     line-height: 1.55rem;
     margin: 2.2rem;
@@ -61,12 +82,12 @@ p {
     background-color: hsl(330, 100%, 98%);
     margin: 2.2rem;
     border-radius: 1rem;
-    padding: 1rem;
 }
 
 h3 {
     font-size: 1.4rem;
     font-weight: 600;
     color: hsl(332, 51%, 32%);
-    
+    padding-left: 1.5rem;
+    padding-top: 1rem;
 }
