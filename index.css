@@ -1,6 +1,8 @@
-html, body {
+html,
+body {
     padding: 0;
     margin: 0;
+    background-color: hsl(30, 54%, 90%);
 }
 
 html {
@@ -16,6 +18,7 @@ body {
 }
 
 main {
+    background-color: white;
     width: 375px;
 }
 
@@ -34,7 +37,8 @@ img {
     width: 100%;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Young Serif';
     margin: 1.5rem 2.2rem 1rem 2.2rem;
     font-weight: 500;
@@ -51,7 +55,9 @@ h2 {
     color: hsl(14, 45%, 36%);
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     font-size: 1.1rem;
     color: hsl(30, 10%, 34%);
 }
@@ -60,7 +66,8 @@ header {
     margin-top: 2rem;
 }
 
-header p, .nutri p {
+header p,
+.nutri p {
     font-size: 1.1rem;
     line-height: 1.6rem;
     margin: 0rem 1.6rem 0 2.2rem;
@@ -95,7 +102,8 @@ ol {
     padding-bottom: 1rem;
 }
 
-ol li, ol p {
+ol li,
+ol p {
     vertical-align: top;
     padding: 0 1.4rem .2rem 0rem;
     margin: 0 0 0 1rem;
@@ -116,7 +124,7 @@ table {
     font-weight: 400;
     font-size: 1.1rem;
     border-collapse: collapse;
-    margin: 0 0 1rem 2rem; 
+    margin: 0 0 1rem 2rem;
     color: hsl(30, 10%, 34%);
 }
 
@@ -128,8 +136,8 @@ td {
     padding: 1rem 0 1rem 2rem;
 }
 
-table > *:last-child > tr:last-of-type {
-	border: none;
+table>*:last-child>tr:last-of-type {
+    border: none;
 }
 
 .right {
@@ -160,4 +168,124 @@ table > *:last-child > tr:last-of-type {
 
 .instructions {
     margin: 2rem 0 1.8rem 0;
+}
+
+footer {
+    margin-top: 1.4rem;
+
+    img {
+        display: inline;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        vertical-align: sub;
+    }
+
+    p {
+        font-size: 0.938rem;
+        font-weight: 800;
+        display: inline;
+        vertical-align: super;
+        margin-left: 0.5rem;
+    }
+
+
+    a {
+        position: relative;
+        color: hsl(332, 51%, 32%);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: #000000;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    a:hover::before {
+        transform: scaleX(1);
+    }
+}
+
+
+@media (min-width:740px) {
+    main {
+        box-sizing: border-box;
+        width: 740px;
+        border-radius: 2rem;
+        margin: 2rem;
+        padding: 2.8rem;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    h1,
+    h2,
+    header p {
+        padding: .7rem 0;
+        margin: 0;
+    }
+
+    .preparation {
+        padding: 0.02rem 0.2rem;
+        margin: 1.5rem 0;
+
+        ul {
+            padding-bottom: 0;
+        }
+    }
+
+    .ingredients ul {
+        padding: 0 1rem 2rem 1rem;
+        margin: 0;
+    }
+
+    hr {
+        width: 100%;
+        margin: 0;
+    }
+
+    .instructions {
+        line-height: 2.7rem;
+        width: 46rem;
+        padding: 0;
+        margin: 1rem 0;
+
+        ol {
+            padding: 0.2rem 0 .5rem .5rem;
+        }
+    }
+
+    .nutri {
+        margin: 1.4rem 0;
+
+        p {
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            margin: 0;
+        }
+
+        td {
+            padding-right: 0;
+        }
+    }
 }
